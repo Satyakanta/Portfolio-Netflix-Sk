@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="lucifer.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUCIFER</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="logo.png" alt="" /></a>
+      <div class="toggle">
+        <a href="net.html"><img src="toggle.png" alt="" /></a>
+      </div>
+    </header>
+    <div class="banner">
+      <div class="content">
+        <h2><span>Lucifer</span></h2>
+        <p>
+          Bored with being the Lord of Hell, the devil relocates to Los Angeles,
+          where he opens a nightclub and forms a connection with a homicide
+          detective. <br />
+          Starring:Tom Ellis,Lauren German,Kevin Alejandro
+        </p>
+        <a href="#" class="play" onclick="toggle();"
+          ><img src="play.png" alt="" />watch now</a
+        >
+      </div>
+    </div>
+    <div class="trailer">
+      <video src="video/stranger.mp4" controls="true"></video>
+      <img src="close.png" alt="" class="close" onclick="toggle();" />
+    </div>
+    <script>
+      function toggle() {
+        var trailer = document.querySelector(".trailer");
+        let video = document.querySelector(".video");
+        trailer.classList.toggle("active");
+        video.currentTime = 0;
+        video.pause();
+      }
+    </script>
+  </body>
+</html>

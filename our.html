@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="our.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OUR PLANET</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="logo.png" alt="" /></a>
+      <div class="toggle">
+        <a href="net.html"><img src="toggle.png" alt="" /></a>
+      </div>
+    </header>
+    <div class="banner">
+      <div class="content">
+        <h2><span>Our Planet</span></h2>
+        <p>
+          Experience our planet's natural beauty and examine how climate change
+          impacts all living creatures in this ambitious documentary of
+          spectacular scope.
+          <br />
+          Starring:David Attenborough
+        </p>
+        <a href="#" class="play" onclick="toggle();"
+          ><img src="play.png" alt="" />watch now</a
+        >
+      </div>
+    </div>
+    <div class="trailer">
+      <video src="video/Our Planet.mp4" controls="true"></video>
+      <img src="close.png" alt="" class="close" onclick="toggle();" />
+    </div>
+    <script>
+      function toggle() {
+        var trailer = document.querySelector(".trailer");
+        let video = document.querySelector(".video");
+        trailer.classList.toggle("active");
+        video.currentTime = 0;
+        video.pause();
+      }
+    </script>
+  </body>
+</html>
